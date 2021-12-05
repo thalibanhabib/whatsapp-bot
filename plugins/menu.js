@@ -41,25 +41,16 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let rtotalreg = Object.values(global.DATABASE._data.users).filter(user => user.registered == true).length
     let tags = {
       'main': 'Main',
-      'game': 'Game',
-      'xp': 'Exp & Limit',
       'sticker': 'Sticker',
       'kerang': 'Kerang Ajaib',
-      'quotes': 'Quotes',
-      'admin': 'Admin',
       'group': 'Group',
-      'premium': 'Premium',
       'internet': 'Internet',
-      'nulis': 'MagerNulis & Logo',
       'downloader': 'Downloader',
       'tools': 'Tools',
       'fun': 'Fun',
-      'database': 'Database',
       'owner': 'Owner',
       'host': 'Host',
-      'advanced': 'Advanced',
       'info': 'Info',
-      '': 'No Category',
     }
     for (let plugin of Object.values(global.plugins))
       if (plugin && 'tags' in plugin)
@@ -85,10 +76,6 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ╭─「 ${conn.user.name} 」
 │ Hai, %name!
 │
-│ Tersisa *%limit Limit*
-│ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
-│ %totalexp XP in Total
-│ 
 │ Tanggal: *%week %weton, %date*
 │ Tanggal Islam: *%dateIslamic*
 │ Waktu: *%time*

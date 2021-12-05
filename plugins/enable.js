@@ -9,33 +9,15 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
     case 'welcome':
       chat.welcome = isEnable
       break
-    case 'detect':
-      chat.detect = isEnable
-      break
     case 'delete':
       chat.delete = isEnable
       break
     case 'antidelete':
       chat.delete = !isEnable
       break
-    case 'public':
-      isAll = true
-      if (!isROwner) {
-        global.dfail('rowner', m, conn)
-        throw false
-      }
-      global.opts['self'] = !isEnable
-      break
-    case 'antilink':
-      chat.antiLink = isEnable
-      break
-    case 'autolevelup':
-      isUser = true
-      user.autolevelup = isEnable
-      break
     default:
       return m.reply(`
-List option: welcome | delete | public | antilink | autolevelup | detect
+List option: welcome | delete
 
 Contoh:
 ${usedPrefix}enable welcome
