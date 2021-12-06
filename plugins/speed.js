@@ -3,7 +3,7 @@ let util = require('util')
 let { performance } = require('perf_hooks')
 let { sizeFormatter } = require('human-readable')
 let format = sizeFormatter({
-  std: 'JEDEC', // 'SI' (default) | 'IEC' | 'JEDEC'
+  std: 'JEDEC',
   decimalPlaces: 2,
   keepTrailingZeroes: false,
   render: (literal, symbol) => `${literal} ${symbol}B`,
@@ -55,7 +55,7 @@ Respon time : ${speed} ms
 
 📱 *Phone Info* :
 ${'```' + `
-🔋 Battery : ${conn.battery ? `${conn.battery.value}% ${conn.battery.live ? '🔌 Charging...' : '⚡ Discharging'}` : 'Unknown'}
+🔋 Battery : ${conn.battery ? `${conn.battery.value}% ${conn.battery.live ? '' : ''}` : 'Unknown'}
 ${util.format(conn.user.phone)}
 `.trim() + '```'}
 
