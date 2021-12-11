@@ -11,12 +11,6 @@ global.APIKeys = { // APIKey Here
   'https://api.xteam.xyz': 'd90a9e986e18778b'
 }
 
-// Sticker WM
-global.packname = ' '
-global.author = ' '
-
-global.multiplier = 69 // The higher, The harder levelup
-
 let fs = require('fs')
 let chalk = require('chalk')
 let file = require.resolve(__filename)
